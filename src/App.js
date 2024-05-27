@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import HomeComp from './Routes/HomeComp'
+import ProductComp from './Routes/ProductComp'
+import CartComp from './Routes/CartComp'
+import ContactUsComp from './Routes/ContactUsComp'
+import LoginComp from './Routes/LoginComp'
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Fragment>
+      <Routes>
+        <Route path='/' element={<HomeComp/>}/>
+        <Route path='/login' element={<LoginComp/>}/>
+        <Route path='/home' element={<HomeComp/>}/>
+        <Route path='/product' element={<ProductComp/>}/>
+        <Route path='/cart' element={<CartComp/>}/>
+        <Route path='/contact' element={<ContactUsComp/>}/>
+      </Routes>
+       
+      
+    </Fragment>
+  )
 }
 
-export default App;
+export default App

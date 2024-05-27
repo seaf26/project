@@ -1,0 +1,265 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+    text-decoration: none;
+}
+.page{
+    height: 85vh;
+    width: 100%;
+    margin-top: 110px;
+    position: relative;
+}
+.cover{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* margin-top: 3.5rem; */
+    transition: 1s;
+    display: flex; 
+    justify-content: start;
+    padding-left: 10%;
+    align-items: center;
+    background-position: center;
+
+}
+.one{
+    background-image: url(../../images/banner8.jpg);
+    p{
+        line-height: 28px;
+        color: #687188;
+        font-size: 16px;
+        margin: 0 0 30px;
+
+    }
+    h2{
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin: 20px 0;
+        color: #292b2c;
+
+    }
+    button{
+     border: 1px solid #333;
+    background-color: transparent;
+    outline: none;
+    line-height: normal;
+    padding: 12px 35px;
+    border-radius: 40px;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 1;
+    transition: 1s;
+    &:hover{
+        background-color: #333;
+        color: #fff;
+        animation-delay: 0.5s;
+        opacity: 1;
+        
+    }
+
+    }
+}
+.two{
+    background-image: url(../../images/banner7.jpg);
+    p{
+        font-size: 18px;
+        margin: 0 0 16px;
+        color: #292b2c;
+        font-family: 'Roboto';
+    }
+    h2{
+        font-size: 50px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: #292b2c;
+        font-family: 'Roboto';
+    }
+    button{
+        border: 1px solid #ff324d;
+       background-color: transparent;
+       outline: none;
+       line-height: normal;
+       padding: 12px 35px;
+       border-radius: 40px;
+       color: #ff324d;
+       font-size: 1rem;
+       cursor: pointer;
+       opacity: 1;
+       transition: 1s;
+       &:hover{
+           background-color: #ff324d;
+           color: #fff;
+           animation-delay: 0.5s;
+           opacity: 1;
+           
+       }
+   
+       }
+}
+.three{
+    background-image: url(../../images/banner9.jpg);
+    p{
+        font-size: 18px;
+        margin: 0 0 16px;
+        color: #292b2c;
+        font-family: 'Roboto';
+    }
+    h2{
+        font-size: 60px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: #292b2c;
+        font-family: 'Roboto';
+    }
+    button{
+        border: 1px solid #ff324d;
+       background-color: transparent;
+       outline: none;
+       line-height: normal;
+       padding: 12px 35px;
+       border-radius: 40px;
+       color: #ff324d;
+       font-size: 1rem;
+       cursor: pointer;
+       opacity: 1;
+       transition: 1s;
+       &:hover{
+           background-color: #ff324d;
+           color: #fff;
+           animation-delay: 0.5s;
+           opacity: 1;
+           
+       }
+   
+       }
+}
+.home{
+    width: 40%;
+
+}
+
+.cursor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cursor a{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #333;
+    position: relative;
+    cursor: pointer;
+    &:focus{
+        background-color: #ff324d;
+        
+
+    }
+    
+}
+.cursor a:before{
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border: 2px solid #333;
+    margin: -4px;
+    &:focus{
+        border-color: #ff324d;
+        
+
+    }
+}
+@media(max-width:1200px){
+.cover{
+    background-position: 60%;
+    .home{
+        width: 55%;
+    }
+}
+.cursor{
+    bottom: 20%;
+}
+}
+@media(max-width:992px){
+.cover{
+  background-position: 60%;
+    .home{
+        width:60%;
+    }
+}
+.cursor{
+    bottom: 20%;
+}
+}
+@media(max-width:768px){
+.cover{
+    background-position: 65%;
+    .home{
+        width: 65%;
+        h2{
+            font-size: 50px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+    
+}
+.cursor{
+    bottom: 20%;
+}
+}
+@media(max-width:680px){
+.cover{
+    background-position: 65%;
+    .home{
+        width: 65%;
+        h2{
+            font-size: 50px;
+        }
+        p{
+            font-size: 15px;
+
+        }
+        
+    }
+}
+.cursor{
+    bottom: 20%;
+}
+}
+@media(max-width:550px){
+.cover{
+    background-position: 65%;
+    .home{
+        width: 65%;
+        h2{
+            font-size: 50px;
+        }
+        p{
+            font-size: 15px;
+
+        }
+        
+    }
+}
+.cursor{
+    bottom: 20%;
+}
+}
+

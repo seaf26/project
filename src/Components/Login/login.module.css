@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+.loginContainer{
+    width: 100%;
+    height: 150vh;
+}
+.container{
+    width: 100%;
+    height: 15%;
+    background-color: #68718838;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+.textCon h1{
+    font-size: 30px;
+    color: #292b2c;
+}
+.linksCon ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 5px;
+    li{
+        color: #292b2c;
+        font-size: 16px;
+    }
+}
+.login{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inputCon{
+    width: 45%;
+    height: 75%;
+    box-shadow: 0 0 4px 4px rgba(211, 211, 211, 0.57) ;
+    display: flex; justify-content: center;
+    align-items: center;
+}
+.inputs{
+    width: 85%;
+    height: 80%;
+    /* background-color: red; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+    h1{
+        width: 100%;
+        font-size: 30px;
+        color: #292b2c;
+        margin-bottom: 2vh;
+    }
+    input{
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        /* border-color: lightgray; */
+        border: 1px solid lightgray;
+        padding: 0 10px;
+        &:focus {
+            border-color: #0d6dfda9;
+        }
+
+    }
+    .chickBox{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .chick{
+           display: flex;
+           width: 50%;
+           gap: 5px;
+           align-items: center;
+           /* cursor: pointer; */
+           input{
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            &:focus{
+                color: red;
+            }
+           } 
+           label{
+            cursor: pointer;
+            font-size: 16px;
+            color: #687188;
+           }
+
+        }
+        h3{
+            color: #687188;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    }
+    button{
+        width: 100%;
+        height: 60px;
+        border: 1px solid #ff324d;
+        border-radius: 8px;
+        background-color: transparent;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        cursor: pointer;
+        &::after{
+            content: '';
+            display: block;
+            width: 51%;
+            height: 100%;
+            background-color: #ff324d;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: .5s;
+            z-index: -1;
+        }
+        &::before{
+            content: '';
+            display: block;
+            width: 50%;
+            height: 100%;
+            background-color: #ff324d;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transition: .5s;
+            z-index: -1;
+        }
+        &:hover{
+            &::after{
+                width: 0;
+            }
+            &::before{
+                width: 0;
+            }
+            color: #ff324d;
+        }
+        
+        
+    }
+    .or{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+        .hr{
+            width: 45%;
+            height: 2px;
+            background-color:#68718838;
+            
+        }
+        
+        h3{
+            font-size: 16px;
+            color:#687188d9 ;
+        }
+    }
+    .buttons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        a{
+            border: 1px solid ;
+            height: 50px;
+            width: 170px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #fff;
+            gap: 5px;
+            &:nth-child(1){
+                background-color: #3b5998;
+                border-color: #3b5998;
+                &:hover{
+                    background-color: #103990;
+                }
+            }
+            &:nth-child(2){
+                background-color: #d85040;
+                border-color: #d85040;
+                &:hover{
+                    background-color: #d52916;
+                }
+            }
+        }
+        
+
+    }
+    p{
+        font-size: 20px;
+        color: #687188a6;
+        margin: 10px 0;
+        a{
+            color: #292b2c;
+            font-size: 16px;
+            &:hover{
+                color: #ff324d;
+            }
+        }
+    }
+}
+@media (max-width:991px){
+    .loginContainer{
+        width: 100%;
+        height: 180vh;
+    }
+    .container{
+        width: 100%;
+        height: 20%;
+
+        .textCon h1{
+            font-size: 28px;
+
+        }
+    } 
+    .login{
+        width: 100%;
+        height: 80%;
+    } 
+    .inputCon{
+        width: 65%;
+        height: 75%;
+        
+    } 
+}
+
+@media (max-width:768px){
+    .loginContainer{
+        width: 100%;
+        height: 190vh;
+    }
+    .container{
+        width: 100%;
+        height: 20%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 5px;
+        .textCon h1{
+            font-size: 28px;
+
+        }
+    } 
+    .login{
+        width: 100%;
+        height: 80%;
+    } 
+    .inputCon{
+        width: 80%;
+        height: 75%;
+        
+    } 
+}
+@media (max-width:575px){
+    .loginContainer{
+        width: 100%;
+        height: 120vh;
+    }
+    .container{
+        width: 100%;
+        height: 20%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 5px;
+        padding: 0 2.5%;
+        .textCon h1{
+            font-size: 28px;
+            /* margin-bottom: 0 ; */
+
+        }
+    } 
+    .login{
+        width: 100%;
+        height: 80%;
+    } 
+    .inputCon{
+        width: 95%;
+        height: 90%;
+        gap: 5px;
+        
+    } 
+    .inputs{
+        height: 95%;
+        gap: 10px;
+        h1{
+            margin-bottom: 0 !important;
+            
+        }
+    }
+    input{
+        width: 100%;
+        height: 60px;
+        border-radius: 5px;
+        /* border-color: lightgray; */
+        border: 1px solid lightgray;
+        padding: 0 10px;
+        &:focus {
+            border-color: #0d6dfda9;
+        }
+
+    }
+}
