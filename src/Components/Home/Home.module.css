@@ -10,6 +10,7 @@
     width: 100%;
     margin-top: 110px;
     position: relative;
+
 }
 .cover{
     width: 100%;
@@ -35,7 +36,7 @@
 
     }
     h2{
-        font-size: 2.5rem;
+        font-size: 50px;
         font-weight: 600;
         margin: 20px 0;
         color: #292b2c;
@@ -49,7 +50,7 @@
     padding: 12px 35px;
     border-radius: 40px;
     color: #333;
-    font-size: 1rem;
+    font-size: 16px;
     cursor: pointer;
     opacity: 1;
     transition: 1s;
@@ -84,20 +85,49 @@
        background-color: transparent;
        outline: none;
        line-height: normal;
+       position: relative;
        padding: 12px 35px;
        border-radius: 40px;
        color: #ff324d;
-       font-size: 1rem;
+       font-size: 16px;
        cursor: pointer;
-       opacity: 1;
+       /* opacity: 1; */
        transition: 1s;
-       &:hover{
-           background-color: #ff324d;
-           color: #fff;
-           animation-delay: 0.5s;
-           opacity: 1;
-           
-       }
+       &::after{
+        content: "";
+        position: absolute;
+        right: 0px;
+        top: 0;
+        background-color: #ff324d;
+        width: 50%;
+        height: 100%;
+        transition: .8s;
+        z-index: -1;
+        color:white;
+      }
+      &::before{
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        transition: .8s;
+        z-index: -1;
+        background-color: #ff324d;
+    
+      }
+      &:hover{
+        border: 1px solid #ff324d;
+        color: black;    
+        &::after{
+          width: 0px;
+    
+        }
+        &::before{
+          width: 0px;
+        }
+      }
    
        }
 }
@@ -110,7 +140,7 @@
         font-family: 'Roboto';
     }
     h2{
-        font-size: 60px;
+        font-size: 50px;
         margin-bottom: 20px;
         font-weight: 600;
         text-transform: capitalize;
@@ -122,20 +152,49 @@
        background-color: transparent;
        outline: none;
        line-height: normal;
+       position: relative;
        padding: 12px 35px;
        border-radius: 40px;
        color: #ff324d;
-       font-size: 1rem;
+       font-size: 16px;
        cursor: pointer;
-       opacity: 1;
+       /* opacity: 1; */
        transition: 1s;
-       &:hover{
-           background-color: #ff324d;
-           color: #fff;
-           animation-delay: 0.5s;
-           opacity: 1;
-           
-       }
+       &::after{
+        content: "";
+        position: absolute;
+        right: 0px;
+        top: 0;
+        background-color: #ff324d;
+        width: 50%;
+        height: 100%;
+        transition: .8s;
+        z-index: -1;
+        color:white;
+      }
+      &::before{
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        transition: .8s;
+        z-index: -1;
+        background-color: #ff324d;
+    
+      }
+      &:hover{
+        border: 1px solid #ff324d;
+        color: black;    
+        &::after{
+          width: 0px;
+    
+        }
+        &::before{
+          width: 0px;
+        }
+      }
    
        }
 }
@@ -163,6 +222,9 @@
     cursor: pointer;
     &:focus{
         background-color: #ff324d;
+        &::before{
+            border-color: #ff324d;
+        }
         
 
     }

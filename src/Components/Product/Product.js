@@ -15,7 +15,7 @@ const Product = () => {
     const dispatch=useDispatch();
     useEffect(()=>{
         axios
-        .get('https://fakestoreapi.com/products')
+        .get('https://fakestoreapi.com/products') 
         .then((res)=>{setProducts(res.data)})
         .catch((err)=>{console.log(err)})
     },[])
