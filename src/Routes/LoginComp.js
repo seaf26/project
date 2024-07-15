@@ -6,7 +6,7 @@ import Login from '../Components/Login/Login'
 const LoginComp = () => {
   return (
     <div>
-        <NavBar/>
+        {/* <NavBar/> */}
         <Login/>
         <Footer/>
       

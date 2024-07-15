@@ -7,12 +7,14 @@ import { Link } from 'react-router-dom';
 import { IoShuffle } from 'react-icons/io5';
 import { PiMagnifyingGlassPlus } from 'react-icons/pi';
 import { CiHeart } from 'react-icons/ci';
-import { useDispatch } from 'react-redux';
-import { productSlice } from '../../Redux/productSlice';
+import { useDispatch } from 'noval';
+import { ImItalic } from 'react-icons/im';
+// import { productSlice } from '../../Redux/productSlice';
 
 const Product = () => {
     const [products,setProducts]= useState([]);
-    const dispatch=useDispatch();
+    const {dispatch}=useDispatch();
+    // dispatch("addToCart")
     useEffect(()=>{
         axios
         .get('https://fakestoreapi.com/products') 
@@ -46,7 +48,8 @@ const Product = () => {
                             </div>
                             <span>(25)</span>
                         </div>
-                        <Link onClick={()=>dispatch(productSlice.actions.addtoCart(el))} className={productStyle.button}>add to cart</Link>
+                        <Link onClick={()=>dispatch("addToCart",{item:el})}
+                         className={productStyle.button}>add to cart</Link>
 
                     </div>
                 ))
@@ -59,3 +62,4 @@ const Product = () => {
 }
 
 export default Product
+ 

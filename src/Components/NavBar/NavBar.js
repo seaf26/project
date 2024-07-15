@@ -1,12 +1,12 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import './navbar.css'
 import myImage from '../../images/eng.png'
-import { NavLink } from 'react-router-dom'
+import { Navigate, NavLink } from 'react-router-dom'
 import { TfiSearch, TfiUser } from "react-icons/tfi";
 import { IoIosArrowDown, IoIosMenu,IoMdClose } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 import logo from '../../images/logo_dark.png';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'noval';
 import { GiSmartphone } from 'react-icons/gi';
 import { TbArrowsShuffle } from 'react-icons/tb';
 import { CiHeart } from 'react-icons/ci';
@@ -19,16 +19,26 @@ const NavBar = () => {
     const [showNav,setShowNav] = useState(false);
     const [bigMenu,setBigMenu] = useState(false);
     const [search ,setSearch] = useState(false);
+
+    const {dispatch , dirty}= useDispatch();
     
-    const userr = useSelector ((state)=>state.user.user)
-    const cartProducts= (useSelector((state)=>state.product.items))
+    const userr = useSelector ("user")
+    console.log(userr)
+    // const cartProducts= (useSelector((state)=>state.product.items))
+    const cartProducts = useSelector("items")
     useEffect(()=>{
         window.addEventListener("resize",()=>{
            let windowSize= window.innerWidth;
            windowSize <=768 ?setMenu(true):setMenu(false)
         setMenu(windowSize)
         })
+        
     })
+    const logOut = () => {
+        dirty("user"); 
+        // setUserData(null);
+        return <Navigate to="/login"/>
+      }
     window.addEventListener("scroll" , ()=>{
         if (window.scrollY>=10) {
             setHidden(true)
@@ -91,7 +101,7 @@ const NavBar = () => {
                 </NavLink>
                
                 {
-                    JSON.stringify(userr) !== '{}' ?  <p>{userr.username}</p> :
+                    userr ? <p onClick={logOut} >{userr?.username}</p> :
                      <NavLink to='/login' className='links'>
                     <h5><TfiUser /></h5>
                     <span>login</span>

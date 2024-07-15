@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
+    margin-top: 90px;
   }
   .insta .img-insta{
     display: flex;
@@ -32,8 +33,8 @@
   }
   
   .insta .img-insta .single-img{
-    width: 16.666%;
-    min-width: 16.666%;
+    width: 20%;
+    /* min-width: 16.666%; */
     transition: transform 1s ease;
     position: relative;
     overflow: hidden;
@@ -99,7 +100,7 @@
     overflow: hidden;
     gap: 70px;
     img{
-      min-width: 15%;
+      width: 20%;
       opacity: .6;
       transition: 1s;
       &:hover{
