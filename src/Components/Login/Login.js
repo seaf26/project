@@ -64,7 +64,7 @@ const Login = () => {
     <div className={loginStyle.loginContainer}>
         <div className={loginStyle.container}>
             <div className={loginStyle.textCon}>
-                <h1>{t("Login")}</h1>
+                <h1>{t('login')}</h1>
             </div>
             <div className={loginStyle.linksCon}>
                 <ul>
