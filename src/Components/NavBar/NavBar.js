@@ -11,6 +11,7 @@ import { GiSmartphone } from 'react-icons/gi';
 import { TbArrowsShuffle } from 'react-icons/tb';
 import { CiHeart } from 'react-icons/ci';
 import { IoSearchSharp } from "react-icons/io5";
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 
 const NavBar = () => {
@@ -75,8 +76,7 @@ const NavBar = () => {
              <div className='country'>
                 <div className='english'>
                      <img src={myImage} alt='' />
-                     <span>english</span>
-                     <IoIosArrowDown className='icon' />
+                     <LanguageSwitcher />
                 </div>
                 <select name="dollar" id="dollar">
                   <option value="USD">USD</option>
