@@ -10,7 +10,7 @@ const LanguageSwitcher = () => {
   };
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('language') || 'ar';
+    const savedLanguage = localStorage.getItem('language') || 'en';
     i18n.changeLanguage(savedLanguage);
     changeDirection(savedLanguage); // Use changeDirection here
 
@@ -43,8 +43,8 @@ const LanguageSwitcher = () => {
       onChange={(e) => changeLanguage(e.target.value)}
       value={i18n.language}
     >
-      <option value="ar">العربية</option>
       <option value="en">English</option>
+      <option value="ar">العربية</option>
     </select>
   );
 };
