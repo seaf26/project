@@ -27,7 +27,7 @@ const App = () => {
  
   
   return (
-    <Fragment>
+    <div>
       <LanguageSwitcher/>
       <Routes>
         <Route path='/' element={<ProtactedRoute><LoginComp/></ProtactedRoute>}/>
@@ -37,7 +37,7 @@ const App = () => {
         <Route path='/cart' element={<ProtactedRoute><CartComp/></ProtactedRoute>}/>
         <Route path='/contact' element={<ContactUsComp/>}/>
       </Routes>
-    </Fragment>
+    </div>
   )
 }
 

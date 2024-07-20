@@ -1,0 +1,19 @@
+/* LanguageSwitcher.module.css */
+#translate {
+    font-family: "Cairo", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: bold;
+    background-color: #fff; /* White background */
+    color: #114323; /* Dark text for high contrast */
+    border: none; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 18px; 
+    cursor: pointer; 
+
+  }
+  
+  #translate:focus {
+    outline: none;
+    border-color:#114323;
+}

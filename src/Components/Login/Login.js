@@ -64,13 +64,13 @@ const Login = () => {
     <div className={loginStyle.loginContainer}>
         <div className={loginStyle.container}>
             <div className={loginStyle.textCon}>
-                <h1>{t("Login")}</h1>
+                <h1>{t("login")}</h1>
             </div>
             <div className={loginStyle.linksCon}>
                 <ul>
-                    <li>Home <IoIosArrowForward size={12} /> </li>
-                    <li>Pages <IoIosArrowForward size={12} /> </li>
-                    <li>Login</li>
+                    <li>{t('Home')} <IoIosArrowForward size={12} /> </li>
+                    <li>{t('Pages')} <IoIosArrowForward size={12} /> </li>
+                    <li>{t('Login')}</li>
                 </ul>
             </div>
             

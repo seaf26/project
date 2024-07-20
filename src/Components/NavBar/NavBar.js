@@ -11,6 +11,9 @@ import { GiSmartphone } from 'react-icons/gi';
 import { TbArrowsShuffle } from 'react-icons/tb';
 import { CiHeart } from 'react-icons/ci';
 import { IoSearchSharp } from "react-icons/io5";
+import { useTranslation } from 'react-i18next';
+import { changeLanguage } from 'i18next';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 
 const NavBar = () => {
@@ -38,7 +41,7 @@ const NavBar = () => {
         dirty("user"); 
         // setUserData(null);
         return <Navigate to="/login"/>
-      }
+      }    
     window.addEventListener("scroll" , ()=>{
         if (window.scrollY>=10) {
             setHidden(true)
@@ -75,8 +78,12 @@ const NavBar = () => {
              <div className='country'>
                 <div className='english'>
                      <img src={myImage} alt='' />
-                     <span>english</span>
-                     <IoIosArrowDown className='icon' />
+                     {/* <select name='dollar' id='dollar'>
+                        <option>en</option>
+                        <option>ar</option>
+                     </select> */}
+                     <LanguageSwitcher/>
+                     {/* <IoIosArrowDown className='icon' /> */}
                 </div>
                 <select name="dollar" id="dollar">
                   <option value="USD">USD</option>

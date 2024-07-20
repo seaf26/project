@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 // import { store } from './Redux/store';
 import noval from "noval";
 import createDispatch from './Components/Noval/NovalHelper';
+import './Components/i18next/i18n'
 
 const ProviderNoval = noval({
   items: localStorage.getItem("items")!==null?
