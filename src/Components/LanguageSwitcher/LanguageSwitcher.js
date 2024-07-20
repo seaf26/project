@@ -8,6 +8,7 @@ const LanguageSwitcher = () => {
   const changeDirection = (language) => {
     document.body.dir = language === 'ar' ? 'rtl' : 'ltr';
   };
+  
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language') || 'en';
