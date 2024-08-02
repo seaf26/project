@@ -13,16 +13,16 @@ import ScrolBtn from '../Components/ScrolBtn/ScrolBtn'
 const HomeComp = () => {
   return (
     <div>
-      <NavBar/>
+      {/* <NavBar/> */}
       {/* <NavBarTwo/> */}
       <Home/>
-      <About/>
-      <Product/>
-      <Blog/>
-      <Shop/>
-      <ContactUs/>
-      <ScrolBtn/>
-      <Footer/>
+      {/* <About/> */}
+      {/* <Product/> */}
+      {/* <Blog/> */}
+      {/* <Shop/> */}
+      {/* <ContactUs/> */}
+      {/* <ScrolBtn/> */}
+      {/* <Footer/> */}
     </div>
   )
 }
