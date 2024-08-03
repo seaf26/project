@@ -8,7 +8,8 @@ import LoginComp from './Routes/LoginComp'
 import { useDispatch, useSelector } from 'noval'
 // import i18n from'./Components/i18n/i18n';
 import LanguageSwitcher from './Components/LanguageSwitcher/LanguageSwitcher'
-import './index.css';
+import './index.css'; 
+
 
 const App = () => {
   // let [userData,setUserData]= useState(null);
